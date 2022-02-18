@@ -12,7 +12,10 @@ class Tendril
    */
   public Tendril(int len, double theta, int x, int y)
   {
-    //your code here
+    myNumSegments = len;
+    myX = x;
+    myY = y;
+    myAngle = theta;
   }
   public void show()
   {
