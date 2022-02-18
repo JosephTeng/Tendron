@@ -28,5 +28,7 @@ class Tendril
       line(startX,endX);
       line(startY,endY);
     }
+    if(myNumSegments >= 3){
+      Cluster bob = new Cluster(len-1, x, y);
   }
 }
