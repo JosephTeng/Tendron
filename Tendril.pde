@@ -19,6 +19,14 @@ class Tendril
   }
   public void show()
   {
-    //your code here
+    int startX = myX;
+    int startY = myY;
+    for(int i = 0; i < myNumSegments; i++){
+      myAngle+= Math.random()*.4-.2;
+      int endX+=Math.cos(myAngle);
+      int endY+=Math.sin(myAngle);
+      line(startX,endX);
+      line(startY,endY);
+    }
   }
 }
