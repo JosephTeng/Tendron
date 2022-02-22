@@ -23,10 +23,11 @@ class Tendril
     int startY = myY;
     for(int i = 0; i < myNumSegments; i++){
       myAngle+= Math.random()*.4-.2;
-      int endX+=Math.cos(myAngle);
-      int endY+=Math.sin(myAngle);
-      line(startX,endX);
-      line(startY,endY);
+      int endX = startX + Math.cos(myAngle)*4;
+      int endY = startY + Math.sin(myAngle)*4;
+      line(startX,startY,endX,endY);
+      startX= endX;
+      startY= endY;
     }
     if(myNumSegments >= 3){
       Cluster bob = new Cluster(len-1, x, y);
